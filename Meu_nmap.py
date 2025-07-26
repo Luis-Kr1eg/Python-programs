@@ -35,17 +35,21 @@ def mostrar_ajuda_nmap():
     print("""
 Comandos Nmap úteis:
 ────────────────────
--sS      → Scan TCP SYN (rápido e silencioso)
--sT      → Scan TCP Connect (completo)
--sU      → Scan UDP
--sV      → Detectar versão dos serviços
--O       → Detectar sistema operacional
--Pn      → Ignorar ping (escanear hosts mesmo offline)
--T0 a T5 → Ajuste de velocidade (T0 = stealth, T5 = rápido)
--p       → Especificar portas (ex: -p 80,443)
--F       → Scan rápido (top 100 portas)
--A       → Ativa detecção de SO, versão, script scanning e traceroute
-
+-sS.............→ Scan TCP SYN (rápido e silencioso)
+-sT.............→ Scan TCP Connect (completo)
+-sU.............→ Scan UDP
+-sV.............→ Detectar versão dos serviços
+-O..............→ Detectar sistema operacional
+-Pn ............→ Ignorar ping (escanear hosts mesmo offline)
+-T0 a T5........→ Ajuste de velocidade (T0 = stealth, T5 = rápido)
+-p..............→ Especificar portas (ex: -p 22,80,443 ou -p 1-65535)
+--top-ports <N> → Scaneia as N portas mais comuns
+-F..............→ Scan rápido (top 100 portas)
+-A..............→ Ativa detecção de SO, versão, script scanning e traceroute
+--exclude-ports → Excluir portas
+────────────────────────────────────
+PARA MAIS COMANDOS ACESSE O LINK : https://nmap.org/book/port-scanning-options.html
+────────────────────────────────────
 Exemplo de uso completo:
 nmap -sS -p 22,80 -T4 -A 192.168.0.1
 ────────────────────────────────────
